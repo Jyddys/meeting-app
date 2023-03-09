@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import classes from './MainNavigation.module.css';
 import { useUser } from '@auth0/nextjs-auth0/client';
-import Profile from '@/pages/profile';
+import Profile from '@/pages/Profile';
 
 function MainNavigation() {
   const { user, error, isLoading } = useUser();
