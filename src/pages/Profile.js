@@ -1,6 +1,7 @@
 import React from 'react';
 import { useUser } from '@auth0/nextjs-auth0/client';
 
+
 export default function Profile() {
   const { user, error, isLoading } = useUser();
 
@@ -9,10 +10,12 @@ export default function Profile() {
 
   return (
     user && (
-      <div>
-        <img src={user.picture} alt={user.name} />
-        <h2 style={{color: "white"}}>{user.name}</h2>
+      <div className='user-div'>
+        <img className='user-img' src={user.picture} alt={user.name} />
+        <div>
+        <h2>{user.name}</h2>
         <p>{user.email}</p>
+        </div>
       </div>
     )
   );
